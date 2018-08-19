@@ -1,11 +1,11 @@
-<app-header></app-header>
+<app-header (activeLink)="onSelectedFeature($event)"></app-header>
 <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <app-recipe></app-recipe>
+      <app-recipe *ngIf="selectedFeature === 'recipe'"></app-recipe>
     </div>
     <div class="col-md-12">
-        <app-shoppinglist></app-shoppinglist>
-      </div>
+      <app-shoppinglist *ngIf="selectedFeature === 'shopping'"></app-shoppinglist>
+    </div>
   </div>
 </div>
