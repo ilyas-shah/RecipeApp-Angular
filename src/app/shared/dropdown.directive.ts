@@ -5,7 +5,8 @@ import { Directive, OnInit, ElementRef, HostListener, Renderer2, HostBinding } f
 })
 
 export class AppDropdownDirective implements OnInit {
-  @HostBinding('class.open') isOpen: boolean = false;
+  // binds to the property of the element where this directive is present
+  @HostBinding('class.open') isOpen: Boolean = false;
 
   constructor(private elementRef: ElementRef, private renderer: Renderer2) {  }
 
